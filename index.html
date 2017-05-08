@@ -12,9 +12,15 @@
         <header class="site-header" role="banner">
             <div class="container">
               <!--Insert Logo directive here -->
+              <logo-directive class='logo'></logo-directive>
                 <nav class="site-nav">
                     <ul class="primary-nav">
                         <!-- Navs go here -->
+                        <li ui-sref='home'>Home</li>
+                        <li ui-sref='about'>About</li>
+                        <li ui-sref='blog'>Blog</li>
+                        <li ui-sref='shop'>Shop</li>
+
                     </ul>
                 </nav>
                 <button class="hamburger toggle-nav js-toggle-nav" ng-click="showNav">
@@ -28,14 +34,22 @@
         <main class="site-main" role="main">
 
         <!--Views go here -->
+        <ui-view></ui-view>
 
         </main>
         </div>
 
 
 <!--ADD ALL YOUR SCRIPTS HERE -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+<script src='app.js'></script>
+<script src='./controllers/shopCtrl.js'></script>
+<script src='./services/shopService.js'></script>
+<script src='./controllers/productDetailsCtrl.js'></script>
+<script src='./directives/logoDirective.js'></script>
+<script src='./directives/productDirective.js'></script>
 
 </body>
 </html>
